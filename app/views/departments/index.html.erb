@@ -2,6 +2,7 @@
   List of all departments
 </h1>
 
+
 <hr>
 
 <form action="/insert_department" method="post">
@@ -35,21 +36,21 @@
   </tr>
 
   <% @departments.each do |department| %>
-    <tr>
-      <td>
-        <%= @department.id %>
-      </td>
+  <tr>
+    <td>
+      <%= department.id %>
+    </td>
 
-      <td>
-        <%= @department.name %>
-      </td>
+    <td>
+      <%= department.name %>
+    </td>
 
-      <td>
-        <a href="/departments/<%= @department.id %>">
-          Show details
-        </a>
-      </td>
-    </tr>
+    <td>
+      <a href="/departments/<%= department.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
   <% end %>
 </table>
 
